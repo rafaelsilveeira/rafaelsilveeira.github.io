@@ -1,0 +1,127 @@
+body {
+  /*Determina a largura máxima do conteúdo (desktop)*/
+  min-width: 360px;
+  max-width: 1128px;
+  margin: 0 auto;
+  max-width: 1080px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+
+/*BARRA DE MENU*/
+header{
+  font-family: Arial, Helvetica, sans-serif;
+  position: relative;
+  top: 25px;
+  left: 40px;
+  margin-bottom: 55px;
+  width: 92%;
+  max-height: 80px;
+}
+.menu {
+  height: inherit;
+  align-items: center;
+  display: flex;
+  float: left;
+}
+.menu ul {
+  list-style:none;
+  height: inherit;
+  padding-left: 40px;
+}
+.menu ul li { 
+  display: inline; 
+  height: inherit;
+}
+.menu ul li a {  
+  border-radius: 5px;
+  display: inline-block;
+  margin: 5px 0;
+  padding: 5px 10px;
+  
+  /* visual do link */
+  background-color:#eaeaea;
+  color: #324474;
+  font-size: 11px;
+  font-weight: bolder;
+  text-decoration: none;
+}
+.menu ul li a:hover {
+  background-color:#D6D6D6;
+  border-bottom:2px solid #324474;
+  color: #6D6D6D;
+}
+#selected{
+  background-color:#324474;
+  color: whitesmoke;
+}
+/*Fim do menu*/
+
+
+
+.facebook{
+  font-family: Lucida, Tahoma, Helvetica, Roboto;
+  position: relative;
+  display: inline-flex;
+  width: 500px;
+  height: 350px;
+  margin: 5px 10px;
+  text-align: center;
+  color: #fff;
+  font-size: 220px;
+  line-height: 250px;
+  vertical-align: middle;
+  background-color: #385596;
+  box-shadow: 0px 3px 10px rgba(0,0,0,.25);
+}
+button#botaofb {
+    background-image: url(https://upload.wikimedia.org/wikipedia/commons/d/df/Facebook_logo_thumbs_up_like_transparent_SVG.svg);
+    background-color: #e7e9f1;
+    color: #385596;
+    background-size: 50px;
+    background-position: 20px 25%;
+    background-repeat: no-repeat;
+    margin: auto;
+    width: 200px;
+    height: 59px;
+    font-size: 20px;
+    border: 1px solid #a8b4c9;
+    text-align: center;
+    text-indent: 32px;
+}
+
+.instagram{
+  font-family:  Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  position: relative;
+  display: inline-flex;
+  width: 500px;
+  height: 350px;
+  margin: 5px 10px;
+  text-align: center;
+  color: #fff;
+  font-size: 210px;
+  line-height: 250px;
+  vertical-align: middle;
+  background: #d6249f;
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+  box-shadow: 0px 3px 10px rgba(0,0,0,.25);
+}
+button#botaoig {
+  background-image: url(https://cdn.shortpixel.ai/client/q_glossy,ret_img,w_1024/https://www.konfest.com/wp-content/uploads/2019/05/Konfest-PNG-JPG-Image-Pic-Photo-Free-Download-Royalty-Unlimited-clip-art-sticker-Heart-Valentines-Day-love-42.png);
+  background-color: #ffffff;
+  color: #000;
+  background-size: 65px;
+  background-position: 5px 80%;
+  background-repeat: no-repeat;
+  margin: auto;
+  width: 200px;
+  height: 59px;
+  font-size: 20px;
+  box-shadow: none;
+  border: none;
+  text-align: center;
+  text-indent: 32px;
+}
