@@ -170,11 +170,6 @@ header{
   word-wrap: break-word;
 }
 
-.sobre a{
-  color: rgb(45, 153, 45);
-  text-decoration: none;
-}
-
 .sobre .profile{
   float: right;
   margin-left: 2em;
@@ -330,56 +325,3 @@ footer {
   text-align: center;
   text-shadow: 0 0 5px  black;
 }
-
-
-
-
-/*
-section{
-  height: 80vh;
-  width: 100vw;
-  display: flex;
-  flex-wrap: wrap;
-  margin: auto;
-  justify-content: center;
-}
-section h2{
-  display: block;
-  top: 0;
-  margin: 0;
-  padding: 50px 100px;
-}
-
-figure{
-  background-color: green;
-  justify-content: space-around;
-  margin: 15px;
-  position: relative;
-  height: 200px;
-}
-figcaption{
-  display: flex;
-  justify-content: center;
-}
-
-.img-portfolio {
-  transform: scale(1);
-  transition: 500ms;
-}
-.img-portfolio:hover{
-  transform: scale(1.2);
-}
-
-.titulo{
-  transform: scale(0.2) translateY(50vh);
-  opacity: 0;
-  animation: linear 2s animacaoTitulo forwards;
-}
-@keyframes animacaoTitulo {
-  100%{
-    transform: scale(1) translateY(0);
-    opacity: 1;
-  }
-}
-*/
-  
