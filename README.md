@@ -3,4 +3,4 @@
 
 Esta página pessoal apresenta um pouco dos projetos desenvolvidos durante a aprendizagem de html, CSS e JavaScript.
 
-Acesse aqui: [rafaelsilveeira.github.io] (https://rafaelsilveeira.github.io)
+Acesse aqui: <https://rafaelsilveeira.github.io>
