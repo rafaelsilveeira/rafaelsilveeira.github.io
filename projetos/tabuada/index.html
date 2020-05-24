@@ -15,19 +15,24 @@
                 <li><a href="../App_Sorteio/index.html">Sorteador de números</a></li>
                 <li><a href="../App_calculo_de_tarifa/index.html">Calculadora de tarifa</a></li>
                 <li><a href="../Alura-Botao_de_likes/index.html">Botão de Likes</a></li>
-                
             </ul>
         </nav>
     </header>
 
-    <div class="caixa">
+    <div class="titulo">
         <h1>Tabuada</h1>
     </div>
 
-    <section>
-        <div>
-            <div class="insert">Digite o número: <input type="number" name="num" id="txtnum" class="txtnum"></div>
-            <div class="container_botao"><button type="button" class="botao" onclick="tabuada()"><span>Gerar Tabuada</span></button></div>
+    <section class="caixa">
+        <div class="entrada">
+            <p>
+                Digite o número: 
+                <input type="number" name="num" id="txtnum" class="txtnum">
+            </p>
+            
+            <div class="container_botao">
+                <button type="button" class="botao" onclick="tabuada()">Gerar Tabuada</button>
+            </div>
         </div>
         <div id="resultado">
             <select name="tabuada" id="tabuada" size="10">

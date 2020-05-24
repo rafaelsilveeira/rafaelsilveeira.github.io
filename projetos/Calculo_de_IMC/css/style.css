@@ -73,7 +73,6 @@ header{
   /* visual do link */
   background-color:#FFF;
   color: #324474;
-  font-size: 1em;
   font-weight: bolder;
   text-decoration: none;
 }
@@ -95,7 +94,7 @@ header{
   color: #324474;
   width: 100%;
 }
-h1{
+.titulo h1{
   margin: auto;
   font-size: 3em;
 }
