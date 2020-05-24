@@ -49,7 +49,6 @@ function imc(){
         let destacar_linha = document.getElementById(`result_${consulta_tabela}`);
         
         result.innerHTML = `Resultado IMC: <strong>${valor_IMC}</strong>`;
-        result.style.padding = "4px 25px 6px"
         destacar_linha.className += 'result_calc';
     } else{
         alert('Por favor, preencha todos os campos.')
