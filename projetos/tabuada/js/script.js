@@ -9,7 +9,7 @@ function tabuada(){
         lista.innerHTML = '';
         
         let resultado = document.createElement('option');
-        resultado.text = "Confira o resultado abaixo.";
+        resultado.text = "Confira o resultado aqui.";
         resultado.selected = "selected";
         lista.appendChild(resultado);
         
