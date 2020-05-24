@@ -52,6 +52,8 @@ header{
   height: 40px;
   margin-top: 1.5em;
   margin-bottom: 2.5em;
+  font-size: 12px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 .menu ul {
   list-style:none;
@@ -163,5 +165,9 @@ footer{
   color: #000;
   text-align: center;
   font-style: italic;
-  margin: 1em 0;
+  margin: 1em;
+}
+footer p {
+  margin: 0;
+  font-size: 0.7em;
 }
