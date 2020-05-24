@@ -1,45 +1,51 @@
-* {
-    color: #121212;
-    font-family: verdana;
+.clearfix:before, .clearfix:after {
+  content: " ";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+.clearfix {
+  *zoom: 1;
+}
+/*todos os elementos agora levarão em conta apenas a largura e altura determinada, sem somar a este valor a borda e o padding.*/
+*, *:before, *:after {
+   -webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+   box-sizing: border-box;
 }
   
+/****CORPO DA PÁGINA****/
 body{
   /*Determina a largura máxima do conteúdo (desktop)*/
-  min-width: 360px;
-  max-width: 1128px;
-  min-height: 840px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: rgba(10,0,200,.25);
+  max-height: 100vh;
+  max-width: 98vw;
+  margin: 0;
+
+  background-color: #C1BFF1;
+
+  /*Padronizar o tamanho da fonte de referência*/
+  font: normal 10px Verdana; 
 }
+
 
 /*BARRA DE MENU*/
 header{
-  position: fixed;
-  top: 25px;
-  left: 40px;
   width: 100%;
-  max-height: 80px;
-}
-.menu {
-  height: inherit;
-  align-items: center;
-  display: flex;
-  float: left;
+  height: 40px;
+  margin-top: 1.5em;
+  margin-bottom: 2.5em;
 }
 .menu ul {
   list-style:none;
-  height: inherit;
-  padding-left: 40px;
+  text-align: center;
+  padding: 0;
 }
-.menu ul li { 
+.menu li { 
   display: inline; 
-  height: inherit;
 }
-.menu ul li a {  
-  border-radius: 5px;
+.menu a {  
+  border-radius: 0.5em;
   display: inline-block;
   margin: 5px 0;
   padding: 5px 10px;
@@ -47,7 +53,6 @@ header{
   /* visual do link */
   background-color:#FFF;
   color: #324474;
-  font-size: 11px;
   font-weight: bolder;
   text-decoration: none;
 }
@@ -63,18 +68,19 @@ header{
 /*Fim do menu*/
 
 .conteudo {
-  width: 280px;
-  height: 620px;
-  padding: 50px 1em;
-  box-sizing: border-box;
-  overflow: auto;
-  position:  fixed;
-  
-  font-family: Helvetica, Arial, sans-serif;
-  
-  color: #454545;
+  width: 28em;
+  height: 62em;
+  padding: 3em 1em;
+  margin: 6em auto 0;
+
   border-radius: 40px;
-  border: 10px solid currentColor;
+  border: 5px solid currentColor;
+  box-sizing: border-box;
+  
+  overflow: hidden;
+  position: relative;
+  color: #454545;
+
   background-image:
     linear-gradient(
       currentColor 50px, 
@@ -118,26 +124,18 @@ input {
   border: none;
   border-bottom: 2px solid #cacaca;
   display: block;
-  width: calc(100% + 2rem);
-  height: 2.5em;
-  line-height: 2.5em;
+  line-height: 3em;
   position: relative;
   left: -1rem;
   z-index: 1;
-
-  padding-left: 14em;
-  
+  padding-left: 16.2em;
   color: green;
-  font-size: 15px;
   font-weight: bolder;
-  
-  box-sizing: border-box;
 }
 
 input:last-of-type {
   border-bottom: none;
-  box-shadow: 0 2px 5px 0 rgba(0,0,0,.2);
-    
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,.2); 
   margin-bottom: 1em;
 }
 
@@ -148,7 +146,6 @@ label {
   position: relative;
   z-index: 999;
   
-  font-size: .6em;
   text-transform: uppercase;
   line-height: calc(2.5em / .6);
 
@@ -164,7 +161,7 @@ button {
   cursor: pointer;
   
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  font-size: 1em;
+  font-size: 2em;
   font-weight: bold;
   text-transform: uppercase;
   
@@ -177,21 +174,18 @@ button {
 }
 
 button:hover {
-/*   background-image: linear-gradient(
-    rgba(255,255,255,.25),
-    rgba(255,255,255,.25)
-  ) */
   background-color: #4082f0;
 }
 
 button:active {
   background-color: #3072e0;
-  font-size: .98em;
-  transition: .1s easeout;
+  font-size: 1.85em;
+  transition: .05s easeout;
 }
 
-p {
+.conteudo p {
   background: rgba(255, 255, 255, 0.9);
+  font-size: 2em;
   margin-top: 2em;
   padding: 1em 2em;
   height: 275px;
@@ -200,4 +194,14 @@ p {
   align-items: center;
   text-align: center;
   box-shadow: 0 0 12px 2px rgba(0,0,0,.25);
+}
+
+footer{
+  color: #000;
+  text-align: center;
+  font-style: italic;
+  margin: 1em;
+}
+footer p {
+  margin: 0;
 }
