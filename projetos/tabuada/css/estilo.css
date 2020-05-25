@@ -176,8 +176,8 @@ option{
 }
 
 /*estilo de cores alternadas no select*/
-option.tabpar{background-color: rgb(243, 243, 213);}
-option.tabimpar{ background-color: rgb(223, 224, 243);}
+option.tabpar{background-color: #d9daf0;}
+option.tabimpar{ background-color: #f3f3f3;}
 /*fim estilo de cores alternadas no select*/
 
 /*Estilo da barra de rolagem*/
