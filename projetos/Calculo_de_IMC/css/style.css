@@ -87,6 +87,52 @@ header{
   background-color:#324474;
   color: whitesmoke;
 }
+
+  label[for="bt_menu"]{
+    padding: 1em;
+    color: #324474;
+    font-weight: 800;
+    text-align: left;
+    cursor: pointer; 
+    display: none;
+  }
+  #bt_menu{
+    display: none; /*checkbox*/
+  }
+  @media(max-width: 800px){
+    header{
+      margin-bottom: 0.5em;
+    }
+
+    label[for="bt_menu"]{
+      
+      display: block;
+      width: 30vw;
+      margin-top: -1.5em; /*zerando margem do header*/
+    }
+    #bt_menu:checked ~ .menu{
+      display: block;    
+    }
+    #selected{
+      display: none;
+    }
+    .menu{
+      display: none;
+      transition: all .4s;
+      position: relative;
+    }
+    .menu ul{
+      margin-top: 0;
+      background-color: whitesmoke;
+    }
+    .menu a{
+      border-bottom: 1px solid rgba(50, 68, 116, 0.3);
+      border-radius: 0;
+      margin: 0;
+      width: 100vw;
+      float: none;
+    }
+  }
 /*Fim do menu*/
 
 /*TÍTULO*/
@@ -136,7 +182,7 @@ h2{
   align-items: center;
 }
 
-input{
+.entrada input{
     font-size: 0.8em;
     width: 20%;
     border-radius: 4px;
