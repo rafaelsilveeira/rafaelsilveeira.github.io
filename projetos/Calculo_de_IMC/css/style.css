@@ -87,7 +87,8 @@ header{
   background-color:#324474;
   color: whitesmoke;
 }
-
+  
+/*MENU NO MOBILE*/
   label[for="bt_menu"]{
     padding: 1em;
     color: #324474;
@@ -99,16 +100,23 @@ header{
   #bt_menu{
     display: none; /*checkbox*/
   }
+  
   @media(max-width: 800px){
     header{
       margin-bottom: 0.5em;
     }
 
     label[for="bt_menu"]{
-      
+      background-color: #324474;
+      color: whitesmoke;
       display: block;
-      width: 30vw;
+      width: fit-content;
       margin-top: -1.5em; /*zerando margem do header*/
+    }
+
+    .menu{
+      display: none;
+      position: relative;
     }
     #bt_menu:checked ~ .menu{
       display: block;    
@@ -116,14 +124,10 @@ header{
     #selected{
       display: none;
     }
-    .menu{
-      display: none;
-      transition: all .4s;
-      position: relative;
-    }
+
     .menu ul{
       margin-top: 0;
-      background-color: whitesmoke;
+      background-color: #FFF;
     }
     .menu a{
       border-bottom: 1px solid rgba(50, 68, 116, 0.3);
@@ -133,6 +137,7 @@ header{
       float: none;
     }
   }
+/*Fim mobile*/
 /*Fim do menu*/
 
 /*TÍTULO*/
