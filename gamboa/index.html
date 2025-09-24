@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>FAQ – Pregão Eletrônico 263/2025 – Florianópolis</title>
     <style>
+      html {
+        scroll-behavior: smooth;
+      }
       body {
         font-family: Arial, sans-serif;
         background: #f8f9fa;
@@ -19,6 +22,7 @@
         background: #fff;
         border-radius: 8px;
         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        position: relative;
       }
       h1 {
         font-size: 1.5em;
@@ -49,6 +53,36 @@
         border-radius: 4px;
         font-size: 0.98em;
       }
+      .sumario {
+        background: #f1f7ff;
+        border-radius: 6px;
+        padding: 10px;
+        margin-bottom: 1.5em;
+        font-size: 1em;
+      }
+      .sumario ul {
+        padding-left: 1.2em;
+        margin: 0;
+      }
+      .sumario li {
+        margin-bottom: 0.5em;
+      }
+      .topo-btn {
+        position: fixed;
+        bottom: 24px;
+        right: 24px;
+        background: #0056b3;
+        color: #fff;
+        border: none;
+        border-radius: 50%;
+        width: 44px;
+        height: 44px;
+        font-size: 1.5em;
+        cursor: pointer;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+        z-index: 100;
+        display: none;
+      }
       @media (max-width: 600px) {
         .container {
           padding: 8px;
@@ -56,12 +90,34 @@
         h1 {
           font-size: 1.2em;
         }
+        .topo-btn {
+          bottom: 12px;
+          right: 12px;
+          width: 38px;
+          height: 38px;
+          font-size: 1.2em;
+        }
       }
     </style>
+    <script>
+      window.addEventListener("scroll", function () {
+        const btn = document.getElementById("topo-btn");
+        if (window.scrollY > 200) {
+          btn.style.display = "block";
+        } else {
+          btn.style.display = "none";
+        }
+      });
+      function voltarTopo() {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }
+    </script>
   </head>
   <body>
     <div class="container">
-      <h1>FAQ – Pregão Eletrônico 263/2025<br />Prefeitura de Florianópolis</h1>
+      <h1 id="topo">
+        FAQ – Pregão Eletrônico 263/2025<br />Prefeitura de Florianópolis
+      </h1>
       <div class="important">
         <strong>Objeto:</strong> Permissão onerosa de uso de espaços públicos
         para venda de alimentos e bebidas nas praias de Florianópolis, temporada
@@ -72,28 +128,72 @@
         Brasília)
       </div>
 
-      <h2>Dúvidas Frequentes</h2>
+      <div class="sumario">
+        <strong>Sumário</strong>
+        <ul>
+          <li>
+            <a href="#q1"
+              >1. Preciso ter CNPJ de comércio ou pode ser de serviço?</a
+            >
+          </li>
+          <li><a href="#q2">2. Quais CNAEs de MEI são aceitos?</a></li>
+          <li>
+            <a href="#q3"
+              >3. Quais documentos preciso providenciar para habilitação?</a
+            >
+          </li>
+          <li>
+            <a href="#q4">4. Como funciona o envio da proposta e lances?</a>
+          </li>
+          <li>
+            <a href="#q5">5. O que preencher na linha de fornecimento?</a>
+          </li>
+          <li>
+            <a href="#q6">6. O que é valor de referência e valor mínimo?</a>
+          </li>
+          <li>
+            <a href="#q7">7. Como consultar a localização dos quiosques?</a>
+          </li>
+          <li>
+            <a href="#q8"
+              >8. Quais as penalidades em caso de desistência após aprovação?</a
+            >
+          </li>
+          <li><a href="#q9">9. Quais os prazos após aprovação do lance?</a></li>
+          <li>
+            <a href="#q10">10. Quais multas e sanções estão previstas?</a>
+          </li>
+          <li><a href="#q11">11. Quem não pode participar?</a></li>
+          <li>
+            <a href="#q12">12. Como funciona o julgamento e classificação?</a>
+          </li>
+          <li><a href="#q13">13. Quais obrigações após assumir o ponto?</a></li>
+          <li><a href="#passos">Passo a Passo – Após o Pregão</a></li>
+        </ul>
+      </div>
 
-      <div class="faq-item">
+      <div class="faq-item" id="q1">
         <div class="faq-q">
           1. Preciso ter CNPJ de comércio ou pode ser de serviço?
         </div>
         <div class="faq-a">
           O edital exige CNAE compatível com comércio de alimentos e bebidas.
-          CNPJ apenas de serviço não atende ao requisito.
+          CNPJ apenas de serviço não atende ao requisito. Consulte o CNAE no
+          cartão do CNPJ.
         </div>
       </div>
 
-      <div class="faq-item">
+      <div class="faq-item" id="q2">
         <div class="faq-q">2. Quais CNAEs de MEI são aceitos?</div>
         <div class="faq-a">
           Exemplos aceitos: 5611-2/03 (Lanchonetes), 5611-2/01 (Restaurantes),
           5611-2/02 (Bares), 4729-6/99 (Comércio varejista de alimentos),
-          4782-2/01 (Comércio em feiras livres).
+          4782-2/01 (Comércio em feiras livres). O CNAE deve estar ativo e
+          compatível no cadastro do MEI.
         </div>
       </div>
 
-      <div class="faq-item">
+      <div class="faq-item" id="q3">
         <div class="faq-q">
           3. Quais documentos preciso providenciar para habilitação?
         </div>
@@ -106,50 +206,63 @@
             <li>Certidão negativa de falência</li>
             <li>
               Certificado de curso de manipulação de alimentos e atestado de
-              saúde dos funcionários
+              saúde dos funcionários (na assinatura do contrato)
             </li>
             <li>
               Declaração de patrimônio líquido mínimo de 5% do valor do contrato
             </li>
             <li>Declaração de conhecimento das condições locais</li>
           </ul>
+          <em
+            >Obs.: Documentos podem ser substituídos pelo registro cadastral no
+            SICAF, se disponível.</em
+          >
         </div>
       </div>
 
-      <div class="faq-item">
+      <div class="faq-item" id="q4">
         <div class="faq-q">4. Como funciona o envio da proposta e lances?</div>
         <div class="faq-a">
           A proposta deve ser enviada pelo sistema WBC até o prazo limite. Os
           lances são ofertados eletronicamente durante a sessão pública, com
-          incremento mínimo de R$ 200,00. Vence o maior lance de outorga fixa.
+          incremento mínimo de R$ 200,00. Vence o maior lance de outorga fixa. O
+          sistema informa em tempo real o valor do melhor lance, sem divulgar o
+          autor.
         </div>
       </div>
 
-      <div class="faq-item">
+      <div class="faq-item" id="q5">
         <div class="faq-q">5. O que preencher na linha de fornecimento?</div>
         <div class="faq-a">
-          Informe "Comércio de alimentos e bebidas" ou termo equivalente.
+          Informe "Comércio de alimentos e bebidas" ou termo equivalente,
+          conforme o objeto do edital.
         </div>
       </div>
 
-      <div class="faq-item">
+      <div class="faq-item" id="q6">
         <div class="faq-q">6. O que é valor de referência e valor mínimo?</div>
         <div class="faq-a">
-          O valor de referência é estimado pela Administração para cada ponto. O
-          valor mínimo está em tabela específica do Termo de Referência
-          (consulte o edital completo).
+          O valor de referência é estimado pela Administração para cada ponto,
+          servindo de base para os lances. O valor mínimo está em tabela
+          específica do Termo de Referência (consulte o edital completo). O
+          incremento mínimo de lance é R$ 200,00.
         </div>
       </div>
 
-      <div class="faq-item">
+      <div class="faq-item" id="q7">
         <div class="faq-q">7. Como consultar a localização dos quiosques?</div>
         <div class="faq-a">
-          A localização está disponível no link do Google Maps informado no
-          edital.
+          A localização dos quiosques está disponível no
+          <a
+            href="https://www.google.com/maps/d/u/0/edit?mid=1ef8nsV9XiuTjOmjDK7osh9mKnunkK9M&ll=-27.444733344866407%2C-48.524312501141445&z=18"
+            target="_blank"
+            >Google Maps</a
+          >
+          conforme edital.
         </div>
       </div>
 
-      <div class="faq-item">
+      <div class="faq-item" id="q8">
         <div class="faq-q">
           8. Quais as penalidades em caso de desistência após aprovação?
         </div>
@@ -159,7 +272,7 @@
         </div>
       </div>
 
-      <div class="faq-item">
+      <div class="faq-item" id="q9">
         <div class="faq-q">9. Quais os prazos após aprovação do lance?</div>
         <div class="faq-a">
           <ul>
@@ -174,7 +287,7 @@
         </div>
       </div>
 
-      <div class="faq-item">
+      <div class="faq-item" id="q10">
         <div class="faq-q">10. Quais multas e sanções estão previstas?</div>
         <div class="faq-a">
           <ul>
@@ -192,7 +305,63 @@
         </div>
       </div>
 
-      <h2>Passo a Passo – Após o Pregão</h2>
+      <div class="faq-item" id="q11">
+        <div class="faq-q">11. Quem não pode participar?</div>
+        <div class="faq-a">
+          <ul>
+            <li>Pessoa física</li>
+            <li>Pessoa jurídica com sanção impeditiva</li>
+            <li>
+              Empresas com vínculo com dirigentes do órgão ou comissão do
+              certame
+            </li>
+            <li>
+              Empresas condenadas por trabalho infantil ou análogo ao escravo
+              nos últimos 5 anos
+            </li>
+            <li>Agentes públicos do órgão contratante</li>
+            <li>
+              Empresas controladoras, controladas ou coligadas concorrendo entre
+              si
+            </li>
+            <li>Outros casos previstos no edital</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="faq-item" id="q12">
+        <div class="faq-q">12. Como funciona o julgamento e classificação?</div>
+        <div class="faq-a">
+          O julgamento é pelo maior lance de outorga fixa. Após os lances, o
+          pregoeiro verifica habilitação e regularidade do vencedor. Em caso de
+          empate, microempresas e EPPs podem ofertar novo lance. Propostas com
+          vícios, abaixo do mínimo ou inexequíveis são desclassificadas.
+        </div>
+      </div>
+
+      <div class="faq-item" id="q13">
+        <div class="faq-q">13. Quais obrigações após assumir o ponto?</div>
+        <div class="faq-a">
+          <ul>
+            <li>
+              Uso obrigatório dos equipamentos fornecidos pelo patrocinador
+            </li>
+            <li>Manutenção da limpeza e organização do espaço</li>
+            <li>
+              Cumprimento das normas sanitárias, ambientais, fiscais e
+              trabalhistas
+            </li>
+            <li>Proibição de subcontratação</li>
+            <li>Oferta obrigatória do “Prato Manezinho” conforme edital</li>
+            <li>
+              Disponibilização de lixeiras, itens de higiene e documentação à
+              fiscalização
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <h2 id="passos">Passo a Passo – Após o Pregão</h2>
       <ol>
         <li>Acompanhe a sessão pública e envie lances pelo sistema WBC.</li>
         <li>
@@ -210,6 +379,14 @@
         foram extraídas exclusivamente do edital. Para dúvidas específicas,
         consulte o edital completo ou entre em contato com o órgão responsável.
       </div>
+      <button
+        id="topo-btn"
+        class="topo-btn"
+        onclick="voltarTopo()"
+        title="Voltar ao topo"
+      >
+        ↑
+      </button>
     </div>
   </body>
 </html>
